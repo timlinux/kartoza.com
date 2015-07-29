@@ -1,10 +1,10 @@
 wordpress:
   image: tutum/wordpress-stackable
-  hostname: inasafe.org
+  hostname: kartoza.com
   links: 
    - db
   ports:
-   - "8101:80"
+   - "8201:80"
   environment:
     DB_NAME: wordpress
     DB_USER: admin

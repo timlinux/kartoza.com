@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------------
 # Set this to the name of your project / website
 # ------------------------------------------------------------------------
-PROJECT_ID := inasafeorg
-PASSWORD := wheatsworth499
+PROJECT_ID := kartozacom
+PASSWORD := yuiuyiyui
 
 # ------------------------------------------------------------------------
 # Should not normally need to change anything below this point....
@@ -99,7 +99,6 @@ dbrestore:
 	@echo "the existing wordpress database will be lost!"
 	@echo "------------------------------------------------------------------"
 	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/db-restore.sh
-
 
 wpbackup:
 	@echo
