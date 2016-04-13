@@ -108,3 +108,18 @@ wpbackup:
 	@echo "------------------------------------------------------------------"
 	@backups/wp-backup.sh
 
+dbsync:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Syncing database files from live server"
+	@echo "------------------------------------------------------------------"
+	-@ssh kartoza4 "cd /home/web/kartoza.com/; make dbbackup"
+	@rsync -av --exclude *.tar.gz --progress kartoza4:/home/web/kartoza.com/backups/ backups
+
+mediasync:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Syncing web site content to local host"
+	@echo "------------------------------------------------------------------"
+	@rsync -av --progress kartoza4:/home/web/kartoza.com/wp-content/ wp-content
+
