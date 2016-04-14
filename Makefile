@@ -2,7 +2,7 @@
 # Set this to the name of your project / website
 # ------------------------------------------------------------------------
 PROJECT_ID := kartozacom
-PASSWORD := fohquai8Chie
+PASSWORD := certificate
 
 # ------------------------------------------------------------------------
 # Should not normally need to change anything below this point....
@@ -31,7 +31,7 @@ web:
 	dps
 
 
-webwithrestore: kill rm web 
+webwithrestore: kill rm web
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running the restoring dump from backups/wordpress.sql "
